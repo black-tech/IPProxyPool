@@ -178,7 +178,7 @@ USER_AGENTS = [
 def get_header():
     return {
         'User-Agent': random.choice(USER_AGENTS),
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept': 'application/json;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Connection': 'keep-alive',
         'Accept-Encoding': 'gzip, deflate',
@@ -201,8 +201,8 @@ CHECK_PROXY = {'function': 'checkProxy'}  # {'function':'baidu_check'}
 # 下面配置squid,现在还没实现
 # SQUID={'path':None,'confpath':'C:/squid/etc/squid.conf'}
 
-MAX_CHECK_PROCESS = 5  # CHECK_PROXY最大进程数
+MAX_CHECK_PROCESS = 15  # CHECK_PROXY最大进程数
 MAX_CHECK_CONCURRENT_PER_PROCESS = 30  # CHECK_PROXY时每个进程的最大并发
-TASK_QUEUE_SIZE = 50  # 任务队列SIZE
-MAX_DOWNLOAD_CONCURRENT = 3  # 从免费代理网站下载时的最大并发
+TASK_QUEUE_SIZE = 100  # 任务队列SIZE
+MAX_DOWNLOAD_CONCURRENT = 10  # 从免费代理网站下载时的最大并发
 CHECK_WATI_TIME = 1  # 进程数达到上限时的等待时间
