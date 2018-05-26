@@ -13,7 +13,7 @@ ip，端口，类型(0高匿名，1透明)，protocol(0 http,1 https),country(�
 '''
 parserList = [
     {
-        'urls': ['http://www.66ip.cn/%s.html' % n for n in ['index'] + list(range(2, 12))],
+        'urls': ['http://www.66ip.cn/%s.html' % n for n in ['index'] + list(range(2, 120))],
         'type': 'xpath',
         'pattern': ".//*[@id='main']/div/div[1]/table/tr[position()>1]",
         'position': {'ip': './td[1]', 'port': './td[2]', 'type': './td[4]', 'protocol': ''}
@@ -32,7 +32,7 @@ parserList = [
 
     },
     {
-        'urls': ['http://www.mimiip.com/gngao/%s' % n for n in range(1, 10)],
+        'urls': ['http://www.mimiip.com/gngao/%s' % n for n in range(1, 200)],
         'type': 'xpath',
         'pattern': ".//table[@class='list']/tr",
         'position': {'ip': './td[1]', 'port': './td[2]', 'type': '', 'protocol': ''}
